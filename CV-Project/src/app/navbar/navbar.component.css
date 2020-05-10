@@ -1,0 +1,19 @@
+.nav-link {
+    font-size: 18px;
+}
+
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;    
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);   
+    background-color: rgb(209, 202, 202);
+}
+
+li {
+    padding: 8px;
+}
+
+a:hover {
+    background-color: gray;
+}
