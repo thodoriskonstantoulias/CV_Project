@@ -1,14 +1,15 @@
 <mat-expansion-panel *ngFor = 'let comp of companies'>
-    <mat-expansion-panel-header>
+    <mat-expansion-panel-header class="right-aligned-header">
       <mat-panel-title>
-        {{comp.name}} - {{comp.title}} <span *ngIf = 'comp.current' style="color: green;"><strong>Current</strong></span>
+        {{comp.name}} - {{comp.title}}
       </mat-panel-title>
       <mat-panel-description>
         {{comp.from | date : 'MM/yyyy'}} - {{comp.to | date : 'MM/yyyy'}} 
       </mat-panel-description>
     </mat-expansion-panel-header>
-  
-    <p>{{comp.text}}</p>
-  
+    
+    <ul class="list-group">
+        <li *ngFor = 'let tasks of comp.text'>{{tasks}}</li>
+    </ul>
 </mat-expansion-panel>
 

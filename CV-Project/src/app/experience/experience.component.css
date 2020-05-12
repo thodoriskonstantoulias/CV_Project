@@ -1,0 +1,7 @@
+mat-expansion-panel:hover {
+    background-color: rgb(203, 238, 162);
+}
+
+mat-expansion-panel {
+    padding: 15px;
+}

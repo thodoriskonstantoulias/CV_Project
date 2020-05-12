@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    font-family: 'Roboto', sans-serif;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;  
+    overflow-x: hidden; 
+}
+
+.right-aligned-header > .mat-content {
+    justify-content: space-between;
+}
+
+.mat-content > mat-panel-title, .mat-content > mat-panel-description {
+  flex: 0 0 auto;
 }
