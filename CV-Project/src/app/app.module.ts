@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { ExprerienceComponent } from './exprerience/exprerience.component';
+import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { InfoComponent } from './info/info.component';
@@ -21,7 +21,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    ExprerienceComponent,
+    ExperienceComponent,
     EducationComponent,
     SkillsComponent,
     InfoComponent,
