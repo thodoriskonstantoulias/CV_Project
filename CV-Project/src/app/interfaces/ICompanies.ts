@@ -3,5 +3,6 @@ interface ICompanies {
     title : string,
     from : Date,
     to : Date,
-    text : string
+    text : string,
+    current : boolean
 };

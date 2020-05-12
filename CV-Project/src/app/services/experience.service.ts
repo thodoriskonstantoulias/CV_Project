@@ -10,7 +10,8 @@ export class ExperienceService {
     {
         name : "Agile Actors",
         title : "Software Engineer",
-        from : new Date(2018,6,1),
+        current : true,
+        from : new Date(2018,5),
         to : new Date(),
         text : `- Financial services industry (Previous Client : Alpha Bank, Current Client : Eurobank)
         - Be part of the biggest refactoring banking project in Greece (Alpha Bank)
@@ -25,8 +26,9 @@ export class ExperienceService {
     {
         name : "Accenture",
         title : "Associate Software Engineer",
-        from : new Date(2018,6,1),
-        to : new Date(),
+        current : false,
+        from : new Date(2017,5),
+        to : new Date(2018,5),
         text : `-Financial services industry (Client : Eurobank)
         -Be part of all stages of project including development, integration, UAT and production
         -Functional specification

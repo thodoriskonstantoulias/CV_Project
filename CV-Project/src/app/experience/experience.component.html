@@ -1,1 +1,14 @@
-<h4 *ngFor = 'let comp of companies'>{{comp.name}}</h4>
+<mat-expansion-panel *ngFor = 'let comp of companies'>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{comp.name}} - {{comp.title}} <span *ngIf = 'comp.current' style="color: green;"><strong>Current</strong></span>
+      </mat-panel-title>
+      <mat-panel-description>
+        {{comp.from | date : 'MM/yyyy'}} - {{comp.to | date : 'MM/yyyy'}} 
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  
+    <p>{{comp.text}}</p>
+  
+</mat-expansion-panel>
+
