@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExperienceService } from '../services/experience.service';
 
 @Component({
   selector: 'app-experience',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-
-  constructor() { }
+  public companies : ICompanies[] =  [];
+  constructor(private experienceService : ExperienceService) { }
 
   ngOnInit() {
+    this.companies = this.experienceService.getExperience();
   }
 
 }
