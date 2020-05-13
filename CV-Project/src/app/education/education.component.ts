@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EducationService } from '../services/education.service';
 
 @Component({
   selector: 'app-education',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent implements OnInit {
-
-  constructor() { }
+  public education : IEducation[] = [];
+  constructor(private educationService : EducationService) { }
 
   ngOnInit() {
+    this.education = this.educationService.getEducation();
   }
 
 }
