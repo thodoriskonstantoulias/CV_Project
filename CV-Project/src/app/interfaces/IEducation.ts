@@ -1,4 +1,5 @@
 interface IEducation {
     title : string,
-    uniName : string
+    uniName : string,
+    imageUrl : string
 }
