@@ -1,13 +1,19 @@
-.nav-link {
-    font-size: 18px;
+a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  
 }
 
 .vertical-nav {
-    min-width: 17rem;
-    width: 17rem;
-    height: 150vh;    
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);   
-    background-color: rgb(209, 202, 202);
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 
 li {
@@ -19,5 +25,22 @@ a:hover {
 }
 
 .active{
-    background-color: gray;
+    background-color: #4CAF50;
+  color: white;
 }
+
+@media screen and (max-width: 700px) {
+    .vertical-nav {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .vertical-nav a {float: left;}
+   
+  }
+  @media screen and (max-width: 400px) {
+    .vertical-nav a {
+      text-align: center;
+      float: none;
+    }
+  }
