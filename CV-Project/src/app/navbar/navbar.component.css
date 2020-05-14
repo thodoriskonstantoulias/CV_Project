@@ -1,31 +1,34 @@
 a {
   display: block;
-  color: black;
+  color: #ffffff;
   padding: 16px;
-  text-decoration: none;
-  
+  text-decoration: none;  
+}
+
+.fa {
+    color: white;
+}
+
+span {
+    color: white;
 }
 
 .vertical-nav {
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #f1f1f1;
+  background-color: #000000;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
-li {
-    padding: 7px;
-}
-
 a:hover {
-    background-color: gray;
+    background-color: rgb(118, 32, 230);
 }
 
 .active{
-    background-color: #4CAF50;
+    background-color: rgb(118, 32, 230);
   color: white;
 }
 
