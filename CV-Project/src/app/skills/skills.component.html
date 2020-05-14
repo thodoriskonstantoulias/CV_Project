@@ -1,1 +1,26 @@
-<h4 *ngFor = 'let skill of skills'>{{skill.skillName}}</h4>
+<h1 class="text-center">Skills rating</h1>
+<hr>    
+<br>
+
+<table class="table table-borderless table-dark table-hover table-striped">
+    <thead>
+        <tr>
+            <th style="width: 50%;">Tech</th>
+            <th style="width: 50%;">Star</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = 'let skill of skills'>
+        <td>{{skill.skillName}}</td>
+        <td>
+            <span *ngFor="let item of numbers">
+                <i *ngIf = 'item <= skill.starCount; else other' class="fa fa-star"></i>
+                <ng-template #other><i class="fa fa-star-o"></i></ng-template> 
+                </span>
+        </td>
+        </tr>
+    </tbody>
+</table>
+
+
+

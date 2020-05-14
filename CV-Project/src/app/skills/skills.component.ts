@@ -9,7 +9,10 @@ import { SkillsService } from '../services/skills.service';
 export class SkillsComponent implements OnInit {
 
   public skills : ISkills[] = [];
-  constructor(private skillsService : SkillsService) { }
+  public numbers = [1,2,3,4,5];
+  constructor(private skillsService : SkillsService) {
+    
+   }
 
   ngOnInit() {
     this.skills = this.skillsService.getSkills();
