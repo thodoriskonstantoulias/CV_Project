@@ -9,7 +9,7 @@ import { SkillsService } from '../services/skills.service';
 export class SkillsComponent implements OnInit {
 
   public skills : ISkills[] = [];
-  public numbers = [1,2,3,4,5];
+  public numbers = [1,2,3,4,5,6,7,8,9,10];
   constructor(private skillsService : SkillsService) {
     
    }
