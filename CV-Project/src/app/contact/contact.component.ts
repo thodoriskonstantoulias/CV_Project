@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MailService } from '../services/mail.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,14 +10,18 @@ export class ContactComponent implements OnInit {
   name: string;
   email: string;
   message: string;
-
-  constructor() { }
+  private mailUrl = "https://formspree.io/xgenowed";
+  constructor(private mailService : MailService) { }
 
   ngOnInit() {
   }
 
   processForm(){
-    console.log(`my name is ${this.name}, my email is ${this.email} and my text is ${this.message}`);
+      this.mailService.postMail(this.mailUrl,this.email,this.message)
+          .subscribe(
+            data =>  console.log("Success"),
+            error => console.log("Error")
+          );
   }
 
 }
