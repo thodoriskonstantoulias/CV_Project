@@ -5,6 +5,14 @@ a {
   text-decoration: none;  
 }
 
+.linkedin, .github {
+  display: inline;
+}
+
+hr {
+  border-color: white;
+}
+
 .fa {
     color: white;
 }
@@ -16,7 +24,7 @@ span {
 .vertical-nav {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 250px;
   background-color: #000000;
   position: fixed;
   height: 100%;
@@ -39,11 +47,12 @@ a:hover {
       position: relative;
     }
     .vertical-nav a {float: left;}
-   
+    hr {border-color: black;}
   }
   @media screen and (max-width: 400px) {
     .vertical-nav a {
       text-align: center;
       float: none;
     }
+    hr {border-color: black;}
   }

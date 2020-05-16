@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
     setTimeout(() => {
       this.errorFlag = false;
       this.successFlag = false;
-    }, 2000);
+    }, 5000);
   }
 
 }
