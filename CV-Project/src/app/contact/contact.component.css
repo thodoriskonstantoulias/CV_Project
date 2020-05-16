@@ -1,3 +1,4 @@
+
 .ng-invalid.ng-dirty {
     border-color: red;
     border-width: medium;
@@ -6,5 +7,19 @@
 .ng-valid.ng-dirty{
     border-color: green;
     border-width: medium;
+}
+
+.container {
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    display: inline-block;  
+}
+
+hr{
+    background-color: rgb(29, 1, 1);
+    height: 1px;
 }
 

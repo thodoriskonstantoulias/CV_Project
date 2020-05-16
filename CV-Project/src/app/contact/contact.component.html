@@ -1,31 +1,49 @@
-<br>
-<form (ngSubmit)="processForm()" #form="ngForm">
+<div class="wrapper-page">
+  <br>
+  <div class="alert alert-success" *ngIf='successFlag'> 
+    <strong>Your message was sent. I will contact you as soon as i can. Thank you</strong>
+  </div>
+  <div class="alert alert-danger" *ngIf='errorFlag'> 
+    <strong>An error occured</strong>
+  </div>
+  <br>
+  <br>
+  
+  <div class="container">
+    <form (ngSubmit)="processForm()" #form="ngForm">
+  
+      <h1 class="text-center">Contact me</h1>
+      <hr>
+      <div class="form-group">
+        <input type="text" name="name" class="form-control" 
+                placeholder="Your Name" [(ngModel)]="name" required #nameInput="ngModel">
+          <div class="text-danger" *ngIf="nameInput.invalid && nameInput.dirty">
+              Name is required
+          </div>
+      </div>
+    
+      <div class="form-group">
+        <input type="email" name="email" class="form-control" email="true"
+                placeholder="Your Email" [(ngModel)]="email" required #emailInput="ngModel">
+          <div class="text-danger" *ngIf="emailInput.invalid && emailInput.dirty">
+                Email is invalid
+          </div>
+      </div>
+    
+      <div class="form-group">
+        <textarea class="form-control" name="message"  rows="10" cols="50"
+                  placeholder="What's on your mind?" [(ngModel)]="message" required #messageInput="ngModel">      
+        </textarea>
+        <div class="text-danger" *ngIf="messageInput.invalid && messageInput.dirty">
+          Message is required
+      </div>
+      </div>
+    
+      <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Submit</button>
+    
+    </form>
+  </div>
+</div>
 
-    <div class="form-group">
-      <input type="text" name="name" class="form-control" 
-             placeholder="Your Name" [(ngModel)]="name" required #nameInput="ngModel">
-        <div class="text-danger" *ngIf="nameInput.invalid && nameInput.dirty">
-            Name is required
-        </div>
-    </div>
-  
-    <div class="form-group">
-      <input type="email" name="email" class="form-control" 
-             placeholder="Your Email" [(ngModel)]="email" required #emailInput="ngModel">
-        <div class="text-danger" *ngIf="emailInput.invalid && emailInput.dirty">
-             Email is required
-        </div>
-    </div>
-  
-    <div class="form-group">
-      <textarea class="form-control" name="message" 
-                placeholder="What's on your mind?" [(ngModel)]="message" required #messageInput="ngModel">      
-      </textarea>
-      <div class="text-danger" *ngIf="messageInput.invalid && messageInput.dirty">
-        Message is required
-    </div>
-    </div>
-  
-    <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Submit</button>
-  
-  </form>
+
+
