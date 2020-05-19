@@ -1,5 +1,6 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit, ViewChild  } from '@angular/core';
 import { MailService } from '../services/mail.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,9 @@ import { MailService } from '../services/mail.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  @ViewChild('form',{static:true})
+  form: NgForm;
+
   name: string;
   email: string;
   message: string;
@@ -23,6 +27,7 @@ export class ContactComponent implements OnInit {
           .subscribe(
             data =>  {
               this.successFlag = true;
+              this.clearForm();
               this.clearFlagsAfterTime();
             },
             error => {
@@ -37,6 +42,15 @@ export class ContactComponent implements OnInit {
       this.errorFlag = false;
       this.successFlag = false;
     }, 5000);
+  }
+
+  clearForm(){
+    this.name = "";
+    this.email = "";
+    this.message = "";
+    this.form.form.markAsPristine();
+    this.form.form.markAsUntouched();
+    this.form.form.updateValueAndValidity();
   }
 
 }
