@@ -1,0 +1,7 @@
+.about-me{
+    border: 5px solid rgb(29, 1, 1);
+}
+
+.about-me:hover {
+    background-color: rgb(241, 241, 197);
+}
